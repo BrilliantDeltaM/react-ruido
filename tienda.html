@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body class="bg-white text-black">
+    <!-- Navbar -->
+    <nav class="bg-black text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <button id="menu-btn" class="block md:hidden focus:outline-none">
+                    <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-bold text-fluorescentYellow">RUIDO</a>
+
+                <!-- Links -->
+                <div class="flex md:space-x-4 items-center">
+                    <!-- "Inicio" y "Productos" solo visibles en escritorio -->
+                    <a href="index.html" class="hidden md:block hover:text-fluorescentYellow">Inicio</a>
+                    <button class="hidden md:block volver-productos hover:text-fluorescentYellow">Productos</button>
+
+                    <!-- Carrito visible en todas las pantallas -->
+                    <button class="abrir-carrito hover:text-fluorescentYellow relative">
+                        🛒
+                        <span id="carrito-count"
+                            class="absolute -top-2 -right-2 bg-fluorescentYellow text-black text-xs font-bold w-4 h-4 items-center justify-center rounded-full hidden">
+                            0
+                        </span>
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="menu" class="hidden md:hidden bg-black">
+            <a href="index.html"
+                class="block px-4 py-2 text-white hover:bg-fluorescentYellow hover:text-black">Inicio</a>
+            <button
+                class="volver-productos block px-4 py-2 w-full text-left text-white hover:bg-fluorescentYellow hover:text-black">Productos</button>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Sección de Productos -->
+    <main id="productos-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h2 class="text-3xl font-bold text-center text-black mb-8">Nuestros Productos</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div class="border border-gray-300 shadow-lg rounded-lg p-6 group relative">
+                <img src="./img/Michi.jpg" alt="Producto 1"
+                    class="w-full h-64 object-cover rounded-lg transition-transform transform hover:scale-110">
+                <h3 class="text-xl font-bold mt-4">Abanico Michi</h3>
+                <p class="text-gray-500">Descripción breve del producto.</p>
+                <p class="text-2xl font-bold mt-2 text-black">$25000</p>
+                <button class="md:opacity-0 transition-opacity duration-300 md:group-hover:opacity-100 bg-fluorescentYellow text-black w-full py-3 mt-4 rounded-lg hover:bg-yellow-400 comprar">
+                Añadir al carrito
+                </button>
+            </div>
+            <div class="border border-gray-300 shadow-lg rounded-lg p-6 group relative">
+                <img src="./img/Pajaro.jpg" alt="Producto 2"
+                    class="w-full h-64 object-cover rounded-lg transition-transform transform hover:scale-110">
+                <h3 class="text-xl font-bold mt-4">Abanico Pájaro</h3>
+                <p class="text-gray-500">Descripción breve del producto.</p>
+                <p class="text-2xl font-bold mt-2 text-black">$25000</p>
+                <button class="bg-fluorescentYellow text-black w-full py-3 mt-4 rounded-lg hover:bg-yellow-400 comprar md:opacity-0 transition-opacity duration-300 md:group-hover:opacity-100">
+                Añadir al carrito
+                </button>
+            </div>
+            <div class="border border-gray-300 shadow-lg rounded-lg p-6 group relative">
+                <img src="./img/Mercedes.jpg" alt="Producto 3"
+                    class="w-full h-64 object-cover rounded-lg transition-transform transform hover:scale-110">
+                <h3 class="text-xl font-bold mt-4">Abanico Mercedes</h3>
+                <p class="text-gray-500">Descripción breve del producto.</p>
+                <p class="text-2xl font-bold mt-2 text-black">$25000</p>
+                <button class="bg-fluorescentYellow text-black w-full py-3 mt-4 rounded-lg hover:bg-yellow-400 comprar md:opacity-0 transition-opacity duration-300 md:group-hover:opacity-100">
+                Añadir al carrito
+                </button>
+            </div>
+            <div class="border border-gray-300 shadow-lg rounded-lg p-6 group relative">
+                <img src="./img/Primavera.jpg" alt="Producto 4"
+                    class="w-full h-64 object-cover rounded-lg transition-transform transform hover:scale-110">
+                <h3 class="text-xl font-bold mt-4">Abanico Primavera</h3>
+                <p class="text-gray-500">Descripción breve del producto.</p>
+                <p class="text-2xl font-bold mt-2 text-black">$25000</p>
+                <button class="bg-fluorescentYellow text-black w-full py-3 mt-4 rounded-lg hover:bg-yellow-400 comprar md:opacity-0 transition-opacity duration-300 md:group-hover:opacity-100">
+                Añadir al carrito
+                </button>
+            </div>
+            <div class="border border-gray-300 shadow-lg rounded-lg p-6 group relative">
+                <img src="./img/Lapacho.jpg" alt="Producto 5"
+                    class="w-full h-64 object-cover rounded-lg transition-transform transform hover:scale-110">
+                <h3 class="text-xl font-bold mt-4">Abanico Lapacho</h3>
+                <p class="text-gray-500">Descripción breve del producto.</p>
+                <p class="text-2xl font-bold mt-2 text-black">$25000</p>
+                <button class="bg-fluorescentYellow text-black w-full py-3 mt-4 rounded-lg hover:bg-yellow-400 comprar md:opacity-0 transition-opacity duration-300 md:group-hover:opacity-100">
+                Añadir al carrito
+                </button>
+            </div>
+            <div class="border border-gray-300 shadow-lg rounded-lg p-6 group relative">
+                <img src="./img/Charly.jpg" alt="Producto 6"
+                    class="w-full h-64 object-cover rounded-lg transition-transform transform hover:scale-110">
+                <h3 class="text-xl font-bold mt-4">Abanico Charly</h3>
+                <p class="text-gray-500">Descripción breve del producto.</p>
+                <p class="text-2xl font-bold mt-2 text-black">$25000</p>
+                <button class="bg-fluorescentYellow text-black w-full py-3 mt-4 rounded-lg hover:bg-yellow-400 comprar md:opacity-0 transition-opacity duration-300 md:group-hover:opacity-100">
+                Añadir al carrito
+                </button>
+            </div>
+            <div class="border border-gray-300 shadow-lg rounded-lg p-6 group relative">
+                <img src="./img/Mariposa.jpg" alt="Producto 7"
+                    class="w-full h-64 object-cover rounded-lg transition-transform transform hover:scale-110">
+                <h3 class="text-xl font-bold mt-4">Abanico Mariposa</h3>
+                <p class="text-gray-500">Descripción breve del producto.</p>
+                <p class="text-2xl font-bold mt-2 text-black">$25000</p>
+                <button class="bg-fluorescentYellow text-black w-full py-3 mt-4 rounded-lg hover:bg-yellow-400 comprar md:opacity-0 transition-opacity duration-300 md:group-hover:opacity-100">
+                Añadir al carrito
+                </button>
+            </div>
+            <div class="border border-gray-300 shadow-lg rounded-lg p-6 group relative">
+                <img src="./img/2.jpg" alt="Producto 8"
+                    class="w-full h-64 object-cover rounded-lg transition-transform transform hover:scale-110">
+                <h3 class="text-xl font-bold mt-4">Abanico Primavera</h3>
+                <p class="text-gray-500">Descripción breve del producto.</p>
+                <p class="text-2xl font-bold mt-2 text-black">$25000</p>
+                <button class="bg-fluorescentYellow text-black w-full py-3 mt-4 rounded-lg hover:bg-yellow-400 comprar md:opacity-0 transition-opacity duration-300 md:group-hover:opacity-100">
+                Añadir al carrito
+                </button>
+            </div>
+            <div class="border border-gray-300 shadow-lg rounded-lg p-6 group relative">
+                <img src="./img/1.jpg" alt="Producto 9"
+                    class="w-full h-64 object-cover rounded-lg transition-transform transform hover:scale-110">
+                <h3 class="text-xl font-bold mt-4">Abanico Neo Plantita</h3>
+                <p class="text-gray-500">Descripción breve del producto.</p>
+                <p class="text-2xl font-bold mt-2 text-black">$25000</p>
+                <button class="bg-fluorescentYellow text-black w-full py-3 mt-4 rounded-lg hover:bg-yellow-400 comprar md:opacity-0 transition-opacity duration-300 md:group-hover:opacity-100">
+                Añadir al carrito
+                </button>
+            </div>
+            <div class="border border-gray-300 shadow-lg rounded-lg p-6 group relative">
+                <img src="./img/3.jpg" alt="Producto 10"
+                    class="w-full h-64 object-cover rounded-lg transition-transform transform hover:scale-110">
+                <h3 class="text-xl font-bold mt-4">Abanico Charly</h3>
+                <p class="text-gray-500">Descripción breve del producto.</p>
+                <p class="text-2xl font-bold mt-2 text-black">$25000</p>
+                <button class="bg-fluorescentYellow text-black w-full py-3 mt-4 rounded-lg hover:bg-yellow-400 comprar md:opacity-0 transition-opacity duration-300 md:group-hover:opacity-100">
+                Añadir al carrito
+                </button>
+            </div>
+            <div class="border border-gray-300 shadow-lg rounded-lg p-6 group relative">
+                <img src="./img/4.jpg" alt="Producto 11"
+                    class="w-full h-64 object-cover rounded-lg transition-transform transform hover:scale-110">
+                <h3 class="text-xl font-bold mt-4">Abanico Mariposa</h3>
+                <p class="text-gray-500">Descripción breve del producto.</p>
+                <p class="text-2xl font-bold mt-2 text-black">$25000</p>
+                <button class="bg-fluorescentYellow text-black w-full py-3 mt-4 rounded-lg hover:bg-yellow-400 comprar md:opacity-0 transition-opacity duration-300 md:group-hover:opacity-100">
+                Añadir al carrito
+                </button>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <!-- Sección del Carrito -->
+    <section id="carrito-section" class="hidden min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h2 class="text-3xl font-bold text-center text-black mb-8">Carrito de Compras</h2>
+        <ul id="carrito-lista" class="space-y-4"></ul>
+        <div class="mt-6 text-center hidden carrito-item">
+            <p class="text-lg font-bold">Total: $<span id="carrito-total">0.00</span></p>
+        </div>
+        <div id="carrito-vacio" class="mt-6 text-center ">
+            <p class="text-lg font-bold">No hay productos cargados en el carrito</p>
+        </div>
+
+        <div class="flex flex-col mt-4">
+            <button id="enviar-carrito"
+                class="bg-fluorescentYellow text-black w-full py-3 rounded-lg hidden carrito-item hover:bg-yellow-400">
+                Continuar
+            </button>
+
+            <button class="text-black border-none w-full py-3 rounded-lg hover:text-gray-500 volver-productos">
+                Ver mas productos
+            </button>
+
+        </div>
+    </section>
+    <script>
+        const carritoActivo = document.querySelectorAll('.carrito-item');
+        const carritoVacio = document.getElementById('carrito-vacio');
+        const productosSection = document.getElementById('productos-section');
+        const carritoSection = document.getElementById('carrito-section');
+        const abrirCarritoBtn = document.querySelectorAll('.abrir-carrito');
+        const volverProductosBtn = document.querySelectorAll('.volver-productos');
+        const carrito = [];
+        const carritoLista = document.getElementById('carrito-lista');
+        const carritoTotal = document.getElementById('carrito-total');
+        const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
+
+        // Alternar entre productos y carrito
+        volverProductosBtn.forEach(button => {
+            button.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                carritoSection.classList.add('hidden');
+                productosSection.classList.remove('hidden');
+            });
+        });
+
+        abrirCarritoBtn.forEach(button => {
+            button.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                if (productosSection.classList.contains('hidden')){
+                    carritoSection.classList.add('hidden');
+                    productosSection.classList.remove('hidden');
+                }
+                else{
+                    productosSection.classList.add('hidden');
+                    carritoSection.classList.remove('hidden');
+                }
+
+            });
+        });
+
+        // Añadir productos al carrito
+        document.querySelectorAll('.comprar').forEach(button => {
+            button.addEventListener('click', () => {
+                const producto = button.closest('.border');
+                const nombre = producto.querySelector('h3').textContent;
+                const precio = parseFloat(producto.querySelector('.text-2xl').textContent.replace('$',
+                    ''));
+
+                const productoCant = carrito.find(item => item.nombre == nombre);
+
+                if (productoCant) {
+                    productoCant.cantidad += 1;
+
+                } else {
+                    carrito.push({
+                        nombre,
+                        precio,
+                        cantidad: 1
+                    });
+                }
+
+
+                actualizarCarrito();
+            });
+        });
+
+        // Actualizar el carrito
+        function actualizarCarrito() {
+            carritoLista.innerHTML = '';
+            let total = 0;
+            let totalproductos = 0;
+
+            carrito.forEach((producto, index) => {
+                total += producto.precio * producto.cantidad;
+                totalproductos += producto.cantidad;
+                const item = document.createElement('li');
+                item.className = 'flex justify-between items-center border-b pb-2';
+                item.innerHTML = 
+            <div class="flex items-center gap-4">
+                <span>${producto.nombre}</span>
+                <div class="flex justify-around gap-6 border px-2 py-1 rounded">
+                    <button data-index="${index}" data-action="decrementar"
+                        class="text-black">-</button>
+                    <span>${producto.cantidad}</span>
+                    <button data-index="${index}" data-action="incrementar"
+                        class="text-black">+</button>
+                </div>
+            </div>
+            <span>$${(producto.precio * producto.cantidad).toFixed(2)}</span>
+            <button data-index="${index}" data-action="eliminar" class="text-red-500 hover:underline">Eliminar</button>
+                ;
+                carritoLista.appendChild(item);
+            });
+
+            carritoTotal.textContent = total.toFixed(2);
+
+            // Actualizar el contador del carrito
+            const carritoCount = document.getElementById('carrito-count');
+            if (carrito.length > 0) {
+                carritoCount.textContent = totalproductos // Número de productos
+                carritoCount.classList.remove('hidden'); // Mostrar contador
+                carritoVacio.classList.add('hidden');
+                carritoActivo.forEach(item => {
+                    item.classList.remove('hidden'); // Mostrar los elementos
+                });
+
+
+            } else {
+                carritoCount.classList.add('hidden'); // Ocultar contador
+                carritoActivo.forEach(item => {
+                    item.classList.add('hidden'); // Mostrar los elementos
+                });
+                carritoVacio.classList.remove('hidden');
+            }
+
+            // Eventos para incrementar o decrementar cantidad
+            document.querySelectorAll('button[data-action="incrementar"]').forEach(button => {
+                button.addEventListener('click', () => {
+                    const index = parseInt(button.dataset.index);
+                    carrito[index].cantidad++; // Incrementa la cantidad
+                    actualizarCarrito(); // Actualiza el carrito
+                });
+            });
+
+            document.querySelectorAll('button[data-action="decrementar"]').forEach(button => {
+                button.addEventListener('click', () => {
+                    const index = parseInt(button.dataset.index);
+                    if (carrito[index].cantidad > 1) {
+                        carrito[index].cantidad--; // Decrementa la cantidad si es mayor a 1
+                    } else {
+                        carrito.splice(index, 1); // Elimina el producto si la cantidad es 0
+                    }
+                    actualizarCarrito(); // Actualiza el carrito
+                });
+            });
+
+            // Eliminar producto del carrito
+            document.querySelectorAll('#carrito-lista button[data-action = "eliminar"]').forEach(button => {
+                button.addEventListener('click', () => {
+                    const index = button.dataset.index;
+                    carrito.splice(index, 1);
+                    actualizarCarrito();
+                });
+            });
+        }
+
+        // Función para generar el mensaje para WhatsApp
+        function generarMensajeCarrito() {
+            let mensaje = '¡Hola! Estos son los productos que tengo en mi carrito:\n\n';
+            let total = 0;
+            let cantidadTotal = 0; // Variable para contar la cantidad total de productos
+
+            carrito.forEach((producto) => {
+                mensaje += ${producto.nombre} - $${producto.precio.toFixed(2)} x ${producto.cantidad}\n;
+                total += producto.precio * producto.cantidad;
+                cantidadTotal += producto.cantidad; // Acumulamos la cantidad de productos
+            });
+
+            mensaje += \nTotal de productos: ${cantidadTotal}\n; // Mostrar la cantidad total de productos
+            mensaje += Total: $${total.toFixed(2)}\n\n;
+            mensaje += '¡Estoy listo para hacer mi pedido!';
+
+            console.log("Mensaje generado: ", mensaje); // Agregar esto para ver el mensaje generado
+            return encodeURIComponent(mensaje); // Codificar el mensaje para que sea válido en la URL
+        }
+
+        // Enviar el mensaje por WhatsApp
+        function enviarMensajeWhatsApp() {
+            const mensaje = generarMensajeCarrito(); // Crear el mensaje dinámico
+            const whatsappLink = https://wa.me/5493816061625?text=${mensaje};
+
+            // Redirigir al usuario a WhatsApp con el mensaje
+            window.location.href = whatsappLink;
+        }
+
+        // Llamar a la función para enviar el mensaje de WhatsApp cuando se haga clic en el botón
+        const enviarCarritoBtn = document.getElementById('enviar-carrito');
+        if (enviarCarritoBtn) {
+            console.log("Botón para enviar mensaje encontrado");
+            enviarCarritoBtn.addEventListener('click', enviarMensajeWhatsApp);
+        } else {
+            console.log("No se encontró el botón para enviar mensaje");
+        }
+    </script>
+</body>
+
+</html>
